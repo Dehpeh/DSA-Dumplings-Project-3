@@ -1,0 +1,42 @@
+/*
+Color Schemes 
+Blue Navbar: 2B35AF
+Background Purple: #d16aff
+*/
+
+.map_img {
+    width: 50%;
+    height: auto;
+    display: block;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#region-input {
+    display: block;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.buttons {
+    padding-top: 7px;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.button-metric {
+    margin: 5px;
+    width: 150px;
+    background-color: #44099c;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+.button-metric:hover {
+    background-color: #2B35AF;
+    transition: 0.5s;
+}

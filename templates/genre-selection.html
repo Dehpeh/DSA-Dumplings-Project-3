@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Song Guessr!</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='genre-selection.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='general.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <h1>Song Guessr!</h1>
+    </div>
+    <div class="vertical"></div>
+    <div class="map">
+        <img src="{{ url_for('static', filename='mercator_classic_world_political_wall_mural_lg.jpg') }}" class="map_img">
+        <p class="description">Please select a region where you would like to guess songs from:</p>
+        <form action="/process_input" method="post">
+            <input type="text" id="region-input" name="region-input" placeholder="Select a country" onkeydown="return event.key != 'Enter';" required>
+        </form>
+    </div> 
+    <div>
+        <p class="description">Select a metric that you would like the quiz to organize questions by:</p>
+    </div>
+    <!-- Make these submit buttons, so when you press them, they submit the text and activate another function?-->
+    <!-- Would this work because it is a different form??-->
+    <!-- Alternatively, you can redirect it to another page for the user to put in input -->
+    <div class="buttons">
+        <button class="button-metric">
+            <p>Title</p>
+        </button>
+        <button class="button-metric">
+            <p>Rank</p>
+        </button>
+        <button class="button-metric">
+            <p>Date</p>
+        </button>
+        <button class="button-metric">
+            <p>Artist</p>
+        </button>
+    </div>
+</body>
+</html>
