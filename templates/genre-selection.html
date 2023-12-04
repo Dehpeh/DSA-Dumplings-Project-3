@@ -11,7 +11,7 @@
     </div>
     <div class="vertical"></div>
     <div class="map">
-        <img src="{{ url_for('static', filename='mercator_classic_world_political_wall_mural_lg.jpg') }}" class="map_img">
+        <img src="{{ url_for('static', filename='../static/Playlist-Top-100-Most-Streamed-Songs-Spotify-scaled.png') }}" class="map_img">
         <p class="description">Please select a region and sorting metric for your quiz:</p>
         <form action="/process_input" method="post">
             <input type="text" id="region-input" name="region-input" placeholder="Select a region" onkeydown="return event.key != 'Enter';" required>
@@ -26,8 +26,10 @@
             </select>
             
             <br>
-
-            <button id="sb" type="submit">Submit</button>
+            
+            <div id="center-button">
+                <button id="sb" type="submit">Submit</button>
+            </div>
         </form>
 </body>
 </html>
