@@ -1,0 +1,21 @@
+/*
+Color Schemes 
+Blue Navbar: 2B35AF
+Background Purple: #d16aff
+*/
+
+.map_img {
+    width: 50%;
+    height: auto;
+    display: block;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#region-input {
+    display: block;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 50px;
+}
