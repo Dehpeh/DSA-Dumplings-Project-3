@@ -1,33 +1,37 @@
+<!-- This is the first page that is displayed when app.py is run -->
 <!DOCTYPE html>
 <html>
 <head>
     <title>Song Guessr!</title>
+    <!-- genre-selection.css is for just the genre-selection elements, general.css is for general elements like navbar and fonts -->
     <link rel="stylesheet" href="{{ url_for('static', filename='genre-selection.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='general.css') }}">
 </head>
 <body>
+    <!-- navbar (on every page) -->
     <div class="navbar">
         <h1>Song Guessr!</h1>
     </div>
+    <!-- div to make elements aligned vertically instead of horizontally -->
     <div class="vertical"></div>
+    <!-- image -->
     <div class="map">
-        <img src="{{ url_for('static', filename='mercator_classic_world_political_wall_mural_lg.jpg') }}" class="map_img">
+        <img src="{{ url_for('static', filename='../static/Playlist-Top-100-Most-Streamed-Songs-Spotify-scaled.png') }}" class="map_img">
         <p class="description">Please select a region and sorting metric for your quiz:</p>
+        <!-- form to take in two sets of input: text for the region and the sorting metric -->
         <form action="/process_input" method="post">
             <input type="text" id="region-input" name="region-input" placeholder="Select a region" onkeydown="return event.key != 'Enter';" required>
-            
             <br>
-            
             <select id="sorting-metric" name="sorting-metric" required>
                 <option value="title">Title</option>
                 <option value="rank">Rank</option>
                 <option value="date">Date</option>
                 <option value="artist">Artist</option>
             </select>
-            
             <br>
-
-            <button id="sb" type="submit">Submit</button>
+            <div id="center-button">
+                <button id="sb" type="submit">Submit</button>
+            </div>
         </form>
 </body>
 </html>

@@ -4,15 +4,18 @@ from main import main
 app = Flask(__name__)
 selected_songs, song_names, file_path = [], [], []
 
+# display the first page
 @app.route('/')
 def index():
     return render_template('/genre-selection.html')
 
 @app.route('/process_input', methods=['POST'])
 def process_input():
-    # user input
+    # user input from the first page
     country = request.form['region-input']
     metric = request.form['sorting-metric']
+
+    # main is the main function in backend that finds songs from the csv file to display on the quiz
     selected_songs.extend(main(country, metric))
     for song in selected_songs:
         song_names.append(song[0])

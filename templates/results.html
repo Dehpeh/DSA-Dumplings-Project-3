@@ -9,7 +9,9 @@
 <body>
     <div class="navbar">
         <h1>Song Guessr!</h1>
-    </div class="vertical">
+    </div>
+    <!-- the results are displayed in a simlar way as the question in the previous page.
+    show the user the correct answer, whether or not they got each question right or not, and the percentage that they got correct-->
     <div id="results-description">
         <p>Results: {{ percentage }}</p>
     </div>
@@ -55,6 +57,7 @@
             <p>{{ result10 }}</p>
         </div>
     </div>
+    <!-- these numbers are calculated in the heap_sort.py and merge_sort.py functions accordingly and displayed here -->
     <div id="sort-time">
         <p>{{ merge_time }}</p>
         <p>{{ heap_time }}</p>
