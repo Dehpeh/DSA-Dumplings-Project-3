@@ -1,25 +1,156 @@
 <!DOCTYPE html>
 <html>
+
+<head>
     <title>Song Guessr!</title>
     <link rel="stylesheet" href="../static/quiz-question.css">
     <link rel="stylesheet" href="../static/general.css">
+</head>
+
 <body>
     <div class="navbar">
         <h1>Song Guessr!</h1>
-    </div class="vertical">
-    <div class="question">
-        <div id="question-top">
-            <p id="question-description">Song #1</p>
-        </div>
-        <div id="question-mid">
-            <img src="../static/spotify-icon-pink-logo-33.png" id="music-logo">
-            <audio controls>
-                <source src="{{ put file path in here }}" type="audio/mpeg">
-            </audio>
-        </div>
-        <div id="question-bottom">
-            <input type="text" id="guess-input" placeholder="What song is this?">
-        </div>
     </div>
+
+    <form action="/submit" method="post">
+        <div class="vertical">
+            <div class="question">
+
+                <div id="question-top">
+                    <p id="question-description">Song #1</p>
+                </div>
+                <div id="question-mid">
+                    <img src="../static/spotify-icon-pink-logo-33.png" id="music-logo">
+                    <audio controls>
+                        <source src="{{ path1 }}" type="audio/mpeg">
+                    </audio>
+                </div>
+                <div id="question-bottom">
+                    <input type="text" name="guess-input1" placeholder="What song is this?" required>
+                </div>
+
+                <div id="question-top">
+                    <p id="question-description">Song #2</p>
+                </div>
+                <div id="question-mid">
+                    <img src="../static/spotify-icon-pink-logo-33.png" id="music-logo">
+                    <audio controls>
+                        <source src="{{ path2 }}" type="audio/mpeg">
+                    </audio>
+                </div>
+                <div id="question-bottom">
+                    <input type="text" name="guess-input2" placeholder="What song is this?" required>
+                </div>
+
+                <div id="question-top">
+                    <p id="question-description">Song #3</p>
+                </div>
+                <div id="question-mid">
+                    <img src="../static/spotify-icon-pink-logo-33.png" id="music-logo">
+                    <audio controls>
+                        <source src="{{ path3 }}" type="audio/mpeg">
+                    </audio>
+                </div>
+                <div id="question-bottom">
+                    <input type="text" name="guess-input3" placeholder="What song is this?" required>
+                </div>
+
+                <div id="question-top">
+                    <p id="question-description">Song #4</p>
+                </div>
+                <div id="question-mid">
+                    <img src="../static/spotify-icon-pink-logo-33.png" id="music-logo">
+                    <audio controls>
+                        <source src="{{ path4 }}" type="audio/mpeg">
+                    </audio>
+                </div>
+                <div id="question-bottom">
+                    <input type="text" name="guess-input4" placeholder="What song is this?" required>
+                </div>
+
+                <div id="question-top">
+                    <p id="question-description">Song #5</p>
+                </div>
+                <div id="question-mid">
+                    <img src="../static/spotify-icon-pink-logo-33.png" id="music-logo">
+                    <audio controls>
+                        <source src="{{ path5 }}" type="audio/mpeg">
+                    </audio>
+                </div>
+                <div id="question-bottom">
+                    <input type="text" name="guess-input5" placeholder="What song is this?" required>
+                </div>
+
+                <div id="question-top">
+                    <p id="question-description">Song #6</p>
+                </div>
+                <div id="question-mid">
+                    <img src="../static/spotify-icon-pink-logo-33.png" id="music-logo">
+                    <audio controls>
+                        <source src="{{ path6 }}" type="audio/mpeg">
+                    </audio>
+                </div>
+                <div id="question-bottom">
+                    <input type="text" name="guess-input6" placeholder="What song is this?" required>
+                </div>
+
+                <div id="question-top">
+                    <p id="question-description">Song #7</p>
+                </div>
+                <div id="question-mid">
+                    <img src="../static/spotify-icon-pink-logo-33.png" id="music-logo">
+                    <audio controls>
+                        <source src="{{ path7 }}" type="audio/mpeg">
+                    </audio>
+                </div>
+                <div id="question-bottom">
+                    <input type="text" name="guess-input7" placeholder="What song is this?" required>
+                </div>
+
+                <div id="question-top">
+                    <p id="question-description">Song #8</p>
+                </div>
+                <div id="question-mid">
+                    <img src="../static/spotify-icon-pink-logo-33.png" id="music-logo">
+                    <audio controls>
+                        <source src="{{ path8 }}" type="audio/mpeg">
+                    </audio>
+                </div>
+                <div id="question-bottom">
+                    <input type="text" name="guess-input8" placeholder="What song is this?" required>
+                </div>
+
+                <div id="question-top">
+                    <p id="question-description">Song #9</p>
+                </div>
+                <div id="question-mid">
+                    <img src="../static/spotify-icon-pink-logo-33.png" id="music-logo">
+                    <audio controls>
+                        <source src="{{ path9 }}" type="audio/mpeg">
+                    </audio>
+                </div>
+                <div id="question-bottom">
+                    <input type="text" name="guess-input9" placeholder="What song is this?" required>
+                </div>
+
+                <div id="question-top">
+                    <p id="question-description">Song #10</p>
+                </div>
+                <div id="question-mid">
+                    <img src="../static/spotify-icon-pink-logo-33.png" id="music-logo">
+                    <audio controls>
+                        <source src="{{ path10 }}" type="audio/mpeg">
+                    </audio>
+                </div>
+                <div id="question-bottom">
+                    <input type="text" name="guess-input10" placeholder="What song is this?" required>
+                </div>
+
+            <div id="submit-button">
+                <button type="submit">Submit</button>
+            </div>
+        </div>
+    </form>
 </body>
+
 </html>
