@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <title>Song Guessr!</title>
+    <link rel="stylesheet" href="../static/quiz-question.css">
+    <link rel="stylesheet" href="../static/general.css">
+<body>
+    <div class="navbar">
+        <h1>Song Guessr!</h1>
+    </div class="vertical">
+    <div class="question">
+        <div id="question-top">
+            <p id="question-description">Song #1</p>
+        </div>
+        <div id="question-mid">
+            <img src="../static/spotify-icon-pink-logo-33.png" id="music-logo">
+            <audio controls>
+                <source src="{{ put file path in here }}" type="audio/mpeg">
+            </audio>
+        </div>
+        <div id="question-bottom">
+            <input type="text" id="guess-input" placeholder="What song is this?">
+        </div>
+    </div>
+</body>
+</html>
