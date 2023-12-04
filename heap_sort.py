@@ -30,7 +30,12 @@ def heap_sort(data, sort_parameter) -> list:
             break
 
     ten_songs = []
+    print(len(sorted_songs))
     # TTD: implement rng for selection of songs
+
     for i in range(4):
         ten_songs.append(sorted_songs[i*2])
+    # for i in range(10):
+    #     print(i*20)
+    #     ten_songs.append(sorted_songs[i*20])
     return ten_songs
