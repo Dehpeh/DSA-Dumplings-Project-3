@@ -1,7 +1,7 @@
 import heapq
 
 
-def heap_sort(data, sort_parameter) -> list:
+def heap_sort(data, sort_parameter) -> set:
     param_dict = {"title":  0,
                   "rank":   1,
                   "date":   2,
@@ -29,13 +29,13 @@ def heap_sort(data, sort_parameter) -> list:
         except IndexError:
             break
 
-    ten_songs = []
+    ten_songs = set()
     print(len(sorted_songs))
     # TTD: implement rng for selection of songs
 
-    for i in range(4):
-        ten_songs.append(sorted_songs[i*2])
-    # for i in range(10):
-    #     print(i*20)
-    #     ten_songs.append(sorted_songs[i*20])
+    i = 0
+    while len(ten_songs) < 10:
+        ten_songs.add(sorted_songs[i])
+        i += 1
+
     return ten_songs
