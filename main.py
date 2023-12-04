@@ -1,32 +1,39 @@
 from heap_sort import heap_sort
 from merge_sort import merge_sort
+import csv
 import subprocess
 
-
+'''
+function to download mp3 files from spotify url,
+inspired by: https://codepal.ai/code-generator/query/qojNFO2Y/python-spotify-download-mp3-spotdl
+'''
 def download_mp3_with_spotdl(song_url):
-    """
-    Downloads an MP3 file from Spotify using spotdl.
-
-    Parameters:
-    - song_url: str
-        The URL of the Spotify song to be downloaded.
-
-    Returns:
-    - bool:
-        True if the download was successful, False otherwise.
-    """
-
     try:
-        # Using subprocess to run the spotdl command to download the song
-        # subprocess.run(["spotdl", "download", song_url, "mp3"], check=True)
+        # using subprocess to run the spotdl command to download the song
         subprocess.run(["spotdl", song_url])
         return True
-    except subprocess.CalledProcessError:
-        # If an error occurs during the download, return False
+    except subprocess.CalledProcessError:  # download error
         return False
 
 
 def main():
+    count = 0
+    songs = []
+    with open('charts.csv', newline='') as song_list:
+        song_reader = csv.reader(song_list, delimiter=',')
+        for row in song_reader:
+            if count > 0:  # ignore the row with attribute titles
+                songs.append(row)
+            # print(' || '.join(row))
+            count += 1
+            if count > 101734:  # arbitrary stopping point in dataset traversal, >100,000 datapoints
+                break
+
+    print(len(songs))
+    print(print(' || '.join(songs[101733])))
+
+
+    '''
     # sample data for testing
     heap = [
         ["Chantaje", 1, "2017-01-01", "Shakira", "https://open.spotify.com/track/6mICuAdrwEjh6Y6lroV2Kg",
@@ -48,11 +55,13 @@ def main():
            ]
 
     songs = heap_sort(heap, "artist")
-    download_mp3_with_spotdl(songs[0][2])
+    # download_mp3_with_spotdl(songs[0][2])
     for entry in songs:
-        for attribute in entry:
-            print(attribute, end=", ")
-        print()
+        download_mp3_with_spotdl(entry[2])
+        # for attribute in entry:
+        #     print(attribute, end=", ")
+        # print()
+    '''
 
 
 if __name__ == "__main__":

@@ -31,6 +31,6 @@ def merge_sort(arr):
 
 
 # Template main >:)
-my_list = [38, 27, 43, 3, 9, 82, 10]
-merge_sort(my_list)
-print("Sorted List:", my_list)
+# my_list = [38, 27, 43, 3, 9, 82, 10]
+# merge_sort(my_list)
+# print("Sorted List:", my_list)
