@@ -29,7 +29,6 @@ def heap_sort(data, sort_parameter) -> set:
             break
 
     ten_songs = set()
-    print(len(sorted_songs))
 
     i = 0
     while len(ten_songs) < 10:
