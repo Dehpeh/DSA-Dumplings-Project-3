@@ -24,14 +24,12 @@ def heap_sort(data, sort_parameter) -> set:
         try:
             song_entry = heapq.heappop(data)
             sorted_songs.append((song_entry[param_dict["title"]],
-                                 song_entry[param_dict["artist"]],
                                  song_entry[param_dict["url"]]))
         except IndexError:
             break
 
     ten_songs = set()
     print(len(sorted_songs))
-    # TTD: implement rng for selection of songs
 
     i = 0
     while len(ten_songs) < 10:
