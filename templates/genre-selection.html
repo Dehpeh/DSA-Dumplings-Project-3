@@ -15,27 +15,19 @@
         <p class="description">Please select a region where you would like to guess songs from:</p>
         <form action="/process_input" method="post">
             <input type="text" id="region-input" name="region-input" placeholder="Select a country" onkeydown="return event.key != 'Enter';" required>
+            
+            <br>
+            
+            <select id="sorting-metric" name="sorting-metric" required>
+                <option value="title">Title</option>
+                <option value="rank">Rank</option>
+                <option value="date">Date</option>
+                <option value="artist">Artist</option>
+            </select>
+            
+            <br>
+
+            <button type="submit">Submit</button>
         </form>
-    </div> 
-    <div>
-        <p class="description">Select a metric that you would like the quiz to organize questions by:</p>
-    </div>
-    <!-- Make these submit buttons, so when you press them, they submit the text and activate another function?-->
-    <!-- Would this work because it is a different form??-->
-    <!-- Alternatively, you can redirect it to another page for the user to put in input -->
-    <form class="buttons">
-        <button type="submit" class="button-metric" name="title">
-            <p>Title</p>
-        </button>
-        <button type="submit" class="button-metric" name="rank">
-            <p>Rank</p>
-        </button>
-        <button type="submit" class="button-metric" name="date">
-            <p>Date</p>
-        </button>
-        <button type="submit" class="button-metric" name="artist">
-            <p>Artist</p>
-        </button>
-    </form>
 </body>
 </html>

@@ -8,9 +8,13 @@ def index():
 
 @app.route('/process_input', methods=['POST'])
 def process_input():
-    user_input = request.form['region-input']
-    processed_result = f"You entered: {user_input}"
-    return render_template('results.html', result=processed_result)
+    country = request.form['region-input']
+    metric = request.form['sorting-metric']
+
+    print(f'Text Input: {country}')
+    print(f'Selected Option: {metric}')
+
+    return render_template('quiz-question.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
