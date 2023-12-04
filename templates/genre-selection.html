@@ -12,9 +12,9 @@
     <div class="vertical"></div>
     <div class="map">
         <img src="{{ url_for('static', filename='mercator_classic_world_political_wall_mural_lg.jpg') }}" class="map_img">
-        <p class="description">Please select a region where you would like to guess songs from:</p>
+        <p class="description">Please select a region and sorting metric for your quiz:</p>
         <form action="/process_input" method="post">
-            <input type="text" id="region-input" name="region-input" placeholder="Select a country" onkeydown="return event.key != 'Enter';" required>
+            <input type="text" id="region-input" name="region-input" placeholder="Select a region" onkeydown="return event.key != 'Enter';" required>
             
             <br>
             
@@ -27,7 +27,7 @@
             
             <br>
 
-            <button type="submit">Submit</button>
+            <button id="sb" type="submit">Submit</button>
         </form>
 </body>
 </html>

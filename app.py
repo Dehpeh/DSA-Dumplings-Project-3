@@ -2,7 +2,10 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
+# song names from sorting algorithms
 song_names = ["w", "w", "w", "w", "w", "w", "w", "w", "w", "w"]
+
+# run-times
 merge = "0.2s"
 heap = "0.4s"
 
@@ -12,14 +15,15 @@ def index():
 
 @app.route('/process_input', methods=['POST'])
 def process_input():
+    # user input
     country = request.form['region-input']
     metric = request.form['sorting-metric']
 
     print(f'Text Input: {country}')
     print(f'Selected Option: {metric}')
 
-    filePath = ["/static/mp3/spotifydown.com - Would I Lie to You - Radio Edit.mp3", "/static/mp3/spotifydown.com - Treat You Better.mp3", "/static/mp3/spotifydown.com - Would I Lie to You - Radio Edit.mp3", "/static/mp3/spotifydown.com - Treat You Better.mp3", "/static/mp3/spotifydown.com - Would I Lie to You - Radio Edit.mp3", "/static/mp3/spotifydown.com - Treat You Better.mp3", "/static/mp3/spotifydown.com - Would I Lie to You - Radio Edit.mp3", "/static/mp3/spotifydown.com - Treat You Better.mp3", "/static/mp3/spotifydown.com - Would I Lie to You - Radio Edit.mp3", "/static/mp3/spotifydown.com - Treat You Better.mp3"]
-
+    filePath = ["spotifydown.com - Would I Lie to You - Radio Edit.mp3", "/static/mp3/spotifydown.com - Treat You Better.mp3", "/static/mp3/spotifydown.com - Would I Lie to You - Radio Edit.mp3", "/static/mp3/spotifydown.com - Treat You Better.mp3", "/static/mp3/spotifydown.com - Would I Lie to You - Radio Edit.mp3", "/static/mp3/spotifydown.com - Treat You Better.mp3", "/static/mp3/spotifydown.com - Would I Lie to You - Radio Edit.mp3", "/static/mp3/spotifydown.com - Treat You Better.mp3", "/static/mp3/spotifydown.com - Would I Lie to You - Radio Edit.mp3", "/static/mp3/spotifydown.com - Treat You Better.mp3"]
+   
     return render_template('quiz-question.html', path1=filePath[0], path2=filePath[1], path3=filePath[2], path4=filePath[3], path5=filePath[4], path6=filePath[5], path7=filePath[6], path8=filePath[7], path9=filePath[8], path10=filePath[9])
 
 @app.route('/submit', methods=['POST'])

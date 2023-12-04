@@ -18,4 +18,46 @@ Background Purple: #d16aff
     margin: auto;
     text-align: center;
     margin-bottom: 50px;
+    display: block;
+    margin: auto;
+    border-color: #44099c;
+    border-radius: 10px;
+
+}
+
+#region-input::placeholder {
+    color: #44099c;
+    font-family: 'Lexend', sans-serif;
+}
+
+#sorting-metric {
+    display: block;
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+    width: 300px;
+    border-color: #44099c;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+#sb {
+    margin: auto;
+    background-color: #44099c;
+    color: white;
+    width: 300px;
+    border: none;
+    border-radius: 10px;
+    margin: 5px;
+    height: 50px;
+    font-family: 'Lexend', sans-serif;
+}
+
+#sb:hover {
+    background-color: #2B35AF;
+    transition: 0.5s;
+}
+
+#sb:active {
+    background-color: #44099c;
 }

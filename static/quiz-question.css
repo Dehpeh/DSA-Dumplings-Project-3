@@ -26,6 +26,7 @@ Background Purple: #d16aff
     border-color: #44099c;
     background-color: white;
     margin: 0px;
+    margin-top: 25px;
     border-radius: 10px 10px 0px 0px;
 }
 
@@ -57,7 +58,7 @@ Background Purple: #d16aff
     margin: 0px;
 }
 
-#guess-input {
+.guess-input {
     display: block;
     margin: auto;
     text-align: center;
@@ -68,6 +69,7 @@ Background Purple: #d16aff
     border-radius: 10px;
 }
 
-#guess-input::placeholder {
+.guess-input::placeholder {
     color:  #44099c;
+    font-family: 'Lexend', sans-serif;
 }
